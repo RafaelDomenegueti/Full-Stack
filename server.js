@@ -12,5 +12,5 @@ consign().include("Rotas").into(app)
 
 app.listen(8221, "192.168.15.7", function(){
     console.log("Servidor On-line")
-    console.log("On-line: 192.168.15.7:8221")
+    console.log("On-line: http://192.168.15.7:8221")
 })
