@@ -9,9 +9,30 @@
 <body>
     <form method="POST">
         <input type="text" id="username" name="username">
-        <input type="text" id="password" name="password">
-
+        <input type="text" id="sobrenome" name="sobrenome">
+        <input type="text" name="ip" id="ipp">
         <input type="submit" value="Concluir">
     </form>
+    <script>
+
+        var request = new XMLHttpRequest()
+
+        request.open('GET', "http://ip-api.com/json/?fields=61439")
+
+        request.responseType = 'json';
+        request.send()
+
+        request.onload = function() {
+            var dolar = request.response;
+            dolarpop(dolar);
+        }
+
+        function dolarpop(p) {
+
+            console.log(request.response.query)
+            document.getElementById("ipp").value = request.response.query
+        }
+
+    </script>
 </body>
 </html>

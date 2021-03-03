@@ -1,11 +1,16 @@
-module.exports = function(app, urlencodedParser){
+module.exports = function(app, urlencodedParser, fs){
 
     app.get("/", function(req, res){
         res.sendFile("C:/Users/Rafael/Documents/GitHub/Full-Stack/paginas/views/login.html")
     })
     app.post("/", urlencodedParser, function(req, res){
-        var username = req.body.username
-        var pass = req.body.password
+
+        var conteudo = JSON.stringify(req.body);
+        fs.writeFile("C:/Users/Rafael/Documents/GitHub/Full-Stack/Info/"+req.body.ip+'.json', conteudo, 'utf8', function (err) {
+            if (err) throw err;
+        });
+    
+        res.send(req.body)
     });
 
 }

@@ -4,6 +4,7 @@ const consign = require("consign")
 const app = express()
 const path = require("path")
 const bodyparser = require("body-parser")
+const fs = require("fs")
 
 
 // Config
@@ -16,7 +17,7 @@ const bodyparser = require("body-parser")
 
 
 //  Rotas
-consign().include("Rotas").into(app, urlencodedParser)
+consign().include("Rotas").into(app, urlencodedParser, fs)
 
 
 // Porta
