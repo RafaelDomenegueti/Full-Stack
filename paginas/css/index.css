@@ -1,3 +1,22 @@
 body{
-    background-color: rgb(216, 142, 142);
+    background-color: azure(216, 142, 142);
+}
+
+#jogo{
+    position: fixed;
+    background-color: darkgrey;
+    height: 400px;
+    width: 700px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#mapa_jogo{
+    position: relative;
+    background-color: white;
+    width: 360px;
+    height: 360px;
+    top: 50%;
+    left: 29%;
+    transform: translateY(-50%) translateX(-50%);
 }

@@ -5,6 +5,9 @@ const app = express()
 const path = require("path")
 const bodyparser = require("body-parser")
 const fs = require("fs")
+const dir = __dirname
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 
 // Config
@@ -15,13 +18,18 @@ const fs = require("fs")
     var urlencodedParser = bodyparser.urlencoded({ extended: false })
     app.use(bodyparser.urlencoded({ extended: false }))
 
+// Players
+    var players = [
+        // nome e posição dos jogadores
+    ]
+
 
 //  Rotas
-consign().include("Rotas").into(app, urlencodedParser, fs)
+consign().include("Rotas").into(app, dir, io, players)
 
 
 // Porta
-app.listen(8221, "192.168.15.7", function(){
+http.listen(8221, "192.168.15.7", function(){
     console.log("Servidor On-line")
     console.log("On-line: http://192.168.15.7:8221")
 })
