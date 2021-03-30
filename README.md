@@ -1,5 +1,5 @@
 # Jogo Online
 
--Projeto de jogo online utilizando Node.js
+- Projeto de jogo online utilizando Node.js
 
 --------------- EM DESENVOLVIMENTO ---------------
