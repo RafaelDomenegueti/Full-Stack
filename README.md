@@ -1,2 +1,5 @@
-# Full Stack
- Primeiro projeto full stack
+# Jogo Online
+
+-Projeto de jogo online utilizando Node.js
+
+--------------- EM DESENVOLVIMENTO ---------------
